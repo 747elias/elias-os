@@ -1,5 +1,9 @@
 <!doctype html>
 <html>
+  <head>
+    <script type="module" src="./script.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
   <body
     style="
       font-family: &quot;Andale Mono&quot;, monospace;
@@ -19,7 +23,12 @@
         color: #fff;
       "
     >
-      <p style="margin: 0; padding: 10px">Elias OS</p>
+      <p
+        id="welcomeopen"
+        style="margin: 0; padding: 10px; cursor: pointer; user-select: none"
+      >
+        Elias OS
+      </p>
       <p style="margin: 0; padding: 10px">
         <a
           style="color: #fff; text-decoration: none"
@@ -30,21 +39,14 @@
       <p id="timelEment" style="margin: 0; padding: 10px">Time</p>
     </div>
 
-    <div
-      id="welcome"
-      styles="styles"
-      style="
-        border: solid;
-        width: 950px;
-        border-radius: 25px;
-        padding: 10px;
-        background-color: rgb(24, 99, 49);
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      "
-    >
+    <div id="welcome" class="window" styles="styles">
+      <div id="welcomeheader" class="windowheader">
+        <span id="welcomeclose" class="closebutton">X</span>
+
+        <span style="font-weight: bold">Handle</span>
+
+        <span style="width: 50px"></span>
+      </div>
       <h1
         style="
           color: rgb(0, 128, 255);
@@ -59,7 +61,7 @@
         Elias OS is a custom operating system built from scratch.
       </h2>
       <p style="color: rgb(76, 8, 186); text-align: center">
-        Thanks Hackclub for the Tutorial and Motivation!
+        Thanks SerenityUX and Hackclub for the Tutorial and Motivation!
       </p>
       <div style="text-align: center">
         <img style="width: 55%; border-radius: 25px" src="1.jpg" />
