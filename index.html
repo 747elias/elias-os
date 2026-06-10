@@ -6,8 +6,30 @@
       background-color: #16b726;
       background-image: url(./wallpaper.jpg);
       background-size: cover;
+      margin: 0;
+      padding: 0;
     "
   >
+    <div
+      style="
+        display: flex;
+        justify-content: space-between;
+        background-color: rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(1px);
+        color: #fff;
+      "
+    >
+      <p style="margin: 0; padding: 10px">Elias OS</p>
+      <p style="margin: 0; padding: 10px">
+        <a
+          style="color: #fff; text-decoration: none"
+          href="https://github.com/747elias/elias-os"
+          >Source Code</a
+        >
+      </p>
+      <p id="timelEment" style="margin: 0; padding: 10px">Time</p>
+    </div>
+
     <div
       style="
         border: solid;
@@ -41,8 +63,19 @@
         <img style="width: 55%; border-radius: 25px" src="1.jpg" />
       </div>
       <div style="text-align: center">
-        <a href="https://github.com/747elias">My GitHub</a>
+        <a style="color: #000000" href="https://github.com/747elias"
+          >My GitHub</a
+        >
       </div>
     </div>
+
+    <script>
+      function updateTime() {
+        var justnumbers = new Date().toLocaleString();
+        var timeText = document.querySelector("#timelEment");
+        timeText.innerHTML = justnumbers;
+      }
+      setInterval(updateTime, 1000);
+    </script>
   </body>
 </html>
